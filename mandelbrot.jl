@@ -7,7 +7,21 @@ using Images
 function iteracao_mandelbrot(cx, cy; max_iter = 40)
   iter = 0
 
-  # AQUI
+function iteracao_mandelbrot(cx, cy; max_iter = 40)
+  iter = 0
+  x, y = 0, 0
+  while iter ≤ 40
+    x = x^2 - y^2 +cx
+    y = 2*x*y +cy
+    iter += 1
+  end 
+
+  if x^2 + y^2 < 4
+    return false, 0
+  else
+    return true, iter / max_iter
+  end
+end
 
   if x^2 + y^2 < 4
     return false, 0
