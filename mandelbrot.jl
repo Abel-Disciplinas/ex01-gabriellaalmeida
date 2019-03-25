@@ -8,8 +8,10 @@ function iteracao_mandelbrot(cx, cy; max_iter = 40)
   iter = 0
   x, y = 0, 0
   while iter < 40
-    x = x^2 - y^2 +cx
-    y = 2*x*y +cy
+    rex = x^2 - y^2 +cx
+    img = 2*x*y +cy
+    x = rex
+    y = img
     iter += 1
   end
 
